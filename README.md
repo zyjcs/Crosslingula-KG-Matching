@@ -43,6 +43,8 @@ year={2019}
 # ==============================================================
 ## 以下是本人复现的结果（zengyujian）2019-9-21
 * python3 run_model.py train zh_en zh_en_model -epochs=10 -use_pretrained_embedding
+
+
 loading pretrained embedding ...
 load 45680 pre-trained word embeddings from Glove
 reading training data into the mem ...
