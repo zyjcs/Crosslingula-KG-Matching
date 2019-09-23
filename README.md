@@ -171,6 +171,35 @@ best acc @1 on Dev:0.6396190476190476
 
 ## 训练时间大约十小时 （P100-GPU）
 
-## TEST 
+## TEST  测试时间九个半小时
 *  python3 run_model.py test zh_en zh_en_model -use_pretrained_embedding
+
+loading pretrained embedding ...
+load 45680 pre-trained word embeddings from Glove
+reading word idx mapping from file ...
+reading training data into the mem ...
+100%|██████████████████████████████████████████████████| 19388/19388 [00:00<00:00, 45198.33it/s]
+100%|██████████████████████████████████████████████████| 19572/19572 [00:00<00:00, 37094.39it/s]
+100%|███████████████████████████████████████████| 10500000/10500000 [00:21<00:00, 479779.29it/s]
+2019-09-21 11:52:19.284507: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+WARNING:tensorflow:From /home/zengyj/Crosslingula-KG-Matching/graph_match_utils.py:146: calling reduce_max (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/zengyj/Crosslingula-KG-Matching/graph_match_utils.py:147: calling reduce_mean (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/zengyj/Crosslingula-KG-Matching/model.py:392: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See @{tf.nn.softmax_cross_entropy_with_logits_v2}.
+
+100%|█████████████████████████████████████████████████| 105000/105000 [9:30:05<00:00,  3.07it/s]
+-----------------------
+# acc @1 on Test:0.6451428571428571
+# acc @10 on Test:0.758095238095238
+-----------------------
+writing prediction file...
 
